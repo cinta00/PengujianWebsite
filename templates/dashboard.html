@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #15202B;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #172B3E;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-item {
+            background-color: #253746;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .dashboard-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFF;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-description {
+            font-size: 14px;
+            color: #FFF;
+        }
+
+        .dashboard-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-main-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFF;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-main-title">Analisis Hasil Pengujian Website SurveyAsia</div>
+    <div class="dashboard-container">
+        <div class="dashboard-item">
+            <h2 class="dashboard-title">Laporan Status Tes 1</h2>
+            <img class="dashboard-image" src="static/status_report.png" alt="Laporan Status Tes 1">
+            <p class="dashboard-description">Deskripsi laporan status tes 1.</p>
+        </div>
+        <div class="dashboard-item">
+            <h2 class="dashboard-title">Laporan Status Tes 2</h2>
+            <img class="dashboard-image" src="static/test_durations.png" alt="Laporan Status Tes 2">
+            <p class="dashboard-description">Deskripsi laporan status tes 2.</p>
+        </div>
+        <div class="dashboard-item">
+            <h2 class="dashboard-title">Laporan Status Tes 3</h2>
+            <img class="dashboard-image" src="static/comparison.png" alt="Laporan Status Tes 3">
+            <p class="dashboard-description">Deskripsi laporan status tes 3.</p>
+        </div>
+    </div>
+</body>
+</html>

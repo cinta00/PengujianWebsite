@@ -1,0 +1,8 @@
+[build]
+  command = "python visdat" # Ganti dengan perintah build yang sesuai dengan proyek Anda
+  publish = "public" # Ganti dengan direktori publish yang sesuai dengan proyek Anda
+
+[[redirects]]
+  from = "/*"
+  to = "templates/dashboard.html"
+  status = 200
