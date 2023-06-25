@@ -1,6 +1,6 @@
 [build]
-  command = "python visdat" # Ganti dengan perintah build yang sesuai dengan proyek Anda
-  publish = "public" # Ganti dengan direktori publish yang sesuai dengan proyek Anda
+  command = "python visdat.py" # Ganti dengan perintah build yang sesuai dengan proyek Anda
+  publish = "PengujianWebsite" # Ganti dengan direktori publish yang sesuai dengan proyek Anda
 
 [[redirects]]
   from = "/*"
