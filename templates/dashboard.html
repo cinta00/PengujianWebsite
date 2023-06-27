@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VisDat</title>
+    <title>Menampilkan Bagian Tertentu dari Halaman HTML</title>
     <style>
+        /* CSS styling untuk tampilan hasil */
         body {
             background-color: #15202B;
             font-family: Arial, sans-serif;
@@ -54,6 +55,32 @@
             color: #FFF;
             margin-bottom: 30px;
         }
+
+        .dashboard-links {
+            background-color: #253746;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            color: #FFF;
+            grid-column: span 3;
+        }
+
+        .dashboard-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 768px) {
+            .dashboard-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .dashboard-links {
+                grid-column: span 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -61,18 +88,24 @@
     <div class="dashboard-container">
         <div class="dashboard-item">
             <h2 class="dashboard-title">Laporan Status Tes 1</h2>
-            <img class="dashboard-image" src="static/status_report.png" alt="Laporan Status Tes 1">
+            <img class="dashboard-image" src="{{ url_for('static', filename='status_report.png') }}" alt="Laporan Status Tes 1">
             <p class="dashboard-description">Deskripsi laporan status tes 1.</p>
         </div>
         <div class="dashboard-item">
             <h2 class="dashboard-title">Laporan Status Tes 2</h2>
-            <img class="dashboard-image" src="static/test_durations.png" alt="Laporan Status Tes 2">
+            <img class="dashboard-image" src="{{ url_for('static', filename='test_durations.png') }}" alt="Laporan Status Tes 2">
             <p class="dashboard-description">Deskripsi laporan status tes 2.</p>
         </div>
         <div class="dashboard-item">
             <h2 class="dashboard-title">Laporan Status Tes 3</h2>
-            <img class="dashboard-image" src="static/comparison.png" alt="Laporan Status Tes 3">
+            <img class="dashboard-image" src="{{ url_for('static', filename='comparison.png') }}" alt="Laporan Status Tes 3">
             <p class="dashboard-description">Deskripsi laporan status tes 3.</p>
+        </div>
+        <div class="dashboard-links">
+            <h2 class="dashboard-title">Report</h2>
+            <a href="https://bit.ly/Test-Cases-SurveyAsia">Test Cases SurveyAsia</a>
+            <a href="https://bit.ly/GitHub-PengujianWebsitaSurveyAsia">GitHub Pengujian Websita SurveyAsia dengan Robot Framework</a>
+            <a href="#">Link 3</a>
         </div>
     </div>
 </body>
