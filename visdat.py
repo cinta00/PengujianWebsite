@@ -1,4 +1,6 @@
 import xml.etree.ElementTree as ET
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import collections
 import datetime
@@ -31,7 +33,7 @@ def parse_robot_log(log_xml):
 
     # Data Set 2
     labels2 = status_labels[:len(status_labels)]  # Menggunakan label dari data set 1
-    values2 = [1, 3]  # Contoh data set 2
+    values2 = [1, 6]  # Contoh data set 2
 
     # Mengatur lebar batang
     bar_width = 0.35
@@ -44,7 +46,7 @@ def parse_robot_log(log_xml):
     fig1, ax1 = plt.subplots(figsize=(8, 6))
     fig2, ax2 = plt.subplots(figsize=(8, 6))
     fig3, ax3 = plt.subplots(figsize=(8, 6))
-    
+
     # Grafik jumlah status
     ax1.bar(status_labels, status_values, color='#FEBE8C', edgecolor='black', linewidth=1.5)
     ax1.set_xlabel('Test Status')
@@ -53,7 +55,7 @@ def parse_robot_log(log_xml):
     ax1.grid(axis='y', linestyle='--')
 
     # Grafik comparison jumlah status
-    rects1 = ax2.bar(x1, status_values, width=bar_width, label='Automatio Testing')
+    rects1 = ax2.bar(x1, status_values, width=bar_width, label='Automation Testing')
     rects2 = ax2.bar(x2, values2, width=bar_width, label='Manual Testing')
     ax2.set_xlabel('Test Status')
     ax2.set_ylabel('Count')
@@ -69,9 +71,9 @@ def parse_robot_log(log_xml):
     ax3.set_title('Test Case Durations')
 
     # Menyimpan gambar diagram sebagai file PNG
-    fig1.savefig('static/status_report.png', bbox_inches='tight')
-    fig2.savefig('static/comparison.png', bbox_inches='tight')
-    fig3.savefig('static/test_durations.png', bbox_inches='tight')
+    fig1.savefig('D:/SurveyAsia/Automation Testing/PengujianWebsite/static/status_report.png', bbox_inches='tight')
+    fig2.savefig('D:/SurveyAsia/Automation Testing/PengujianWebsite/static/comparison.png', bbox_inches='tight')
+    fig3.savefig('D:/SurveyAsia/Automation Testing/PengujianWebsite/static/test_durations.png', bbox_inches='tight')
 
     # Menghapus plot agar tidak ditampilkan di aplikasi Flask
     plt.close(fig1)
@@ -86,7 +88,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 def run_app():
-    app.run()
+    app.run(threaded=True)
 
 if __name__ == '__main__':
     threading.Thread(target=run_app).start()

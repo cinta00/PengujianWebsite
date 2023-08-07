@@ -1,342 +1,495 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.3 on win32)" generated="20230627 15:10:35.848" rpa="false" schemaversion="4">
-<suite id="s1" name="Testcases" source="d:\SurveyAsia\Automation Testing\PengujianWebsite\testcases.robot">
-<test id="s1-t1" name="TC01" line="10">
+<robot generator="Robot 6.1 (Python 3.11.3 on win32)" generated="20230801 17:22:38.760" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="d:\SurveyAsia\Automation Testing\PengujianWebsite\TestCases.robot">
+<test id="s1-t1" name="Mengisi survey" line="113">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC72-&gt; Respondent mengisi survey</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC72-&gt; Respondent mengisi survey" library="survey">
+<kw name="Masuk website respondent" library="survey">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${url_masuk}</arg>
+<arg>edge</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230627 15:10:36.424" level="INFO">Opening browser 'Chrome' to base url 'https://alpha.surveyasia.id/register/researcher'.</msg>
-<status status="PASS" starttime="20230627 15:10:36.419" endtime="20230627 15:10:40.880"/>
+<msg timestamp="20230801 17:22:39.005" level="INFO">Opening browser 'edge' to base url 'https://alpha.surveyasia.id/login'.</msg>
+<status status="PASS" starttime="20230801 17:22:39.005" endtime="20230801 17:22:43.956"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230627 15:10:40.882" endtime="20230627 15:10:41.025"/>
+<status status="PASS" starttime="20230801 17:22:43.956" endtime="20230801 17:22:44.087"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=nama_lengkap</arg>
-<arg>${EMPTY}</arg>
+<arg>${email}</arg>
+<arg>respondent@example.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.032" level="INFO">Typing text '' into text field 'id=nama_lengkap'.</msg>
-<status status="PASS" starttime="20230627 15:10:41.027" endtime="20230627 15:10:41.222"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email</arg>
-<arg>johnde@example.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.225" level="INFO">Typing text 'johnde@example.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230627 15:10:41.223" endtime="20230627 15:10:41.340"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=telp</arg>
-<arg>+6281234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.344" level="INFO">Typing text '+6281234567890' into text field 'id=telp'.</msg>
-<status status="PASS" starttime="20230627 15:10:41.343" endtime="20230627 15:10:41.446"/>
+<msg timestamp="20230801 17:22:44.089" level="INFO">Typing text 'respondent@example.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230801 17:22:44.089" endtime="20230801 17:22:44.260"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password</arg>
-<arg>Mypassword123@</arg>
+<arg>${pass}</arg>
+<arg>12345678</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.450" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20230627 15:10:41.485" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:10:41.565" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:10:41.447" endtime="20230627 15:10:41.565"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password_confirmation</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.582" level="INFO">Typing password into text field 'id=password_confirmation'.</msg>
-<msg timestamp="20230627 15:10:41.666" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:10:41.737" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:10:41.579" endtime="20230627 15:10:41.738"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=checkbox</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.742" level="INFO">Clicking element 'id=checkbox'.</msg>
-<status status="PASS" starttime="20230627 15:10:41.738" endtime="20230627 15:10:41.789"/>
+<msg timestamp="20230801 17:22:44.263" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20230801 17:22:44.302" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230801 17:22:44.469" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230801 17:22:44.260" endtime="20230801 17:22:44.469"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>name=submit</arg>
+<arg>xpath=/html/body/section/div/div/div[2]/div/div/form/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:41.792" level="INFO">Clicking button 'name=submit'.</msg>
-<status status="PASS" starttime="20230627 15:10:41.789" endtime="20230627 15:10:41.869"/>
+<msg timestamp="20230801 17:22:44.469" level="INFO">Clicking button 'xpath=/html/body/section/div/div/div[2]/div/div/form/button'.</msg>
+<status status="PASS" starttime="20230801 17:22:44.469" endtime="20230801 17:22:45.694"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${class}</var>
-<arg>css=#nama_lengkap</arg>
-<arg>class</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230627 15:10:42.053" level="INFO">${class} = form-control </msg>
-<status status="PASS" starttime="20230627 15:10:41.877" endtime="20230627 15:10:42.054"/>
+<status status="PASS" starttime="20230801 17:22:39.005" endtime="20230801 17:22:45.695"/>
 </kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${class}</arg>
-<arg>form-control</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230627 15:10:42.055" endtime="20230627 15:10:42.057"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:22:45.695" level="INFO">Executing JavaScript:
+window.scrollTo(0, 300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:22:45.695" endtime="20230801 17:22:45.700"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230627 15:10:42.070" endtime="20230627 15:10:44.283"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230801 17:22:46.701" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230801 17:22:45.700" endtime="20230801 17:22:46.701"/>
 </kw>
-<status status="PASS" starttime="20230627 15:10:36.417" endtime="20230627 15:10:44.284"/>
-</test>
-<test id="s1-t2" name="TC02" line="23">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230627 15:10:44.292" level="INFO">Opening browser 'Chrome' to base url 'https://alpha.surveyasia.id/register/researcher'.</msg>
-<status status="PASS" starttime="20230627 15:10:44.290" endtime="20230627 15:10:47.788"/>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Execute JavaScript</arg>
+<arg>document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:22:46.704" level="INFO">Executing JavaScript:
+document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:22:46.701" endtime="20230801 17:22:52.386"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230627 15:10:47.789" endtime="20230627 15:10:47.915"/>
+<status status="PASS" starttime="20230801 17:22:46.701" endtime="20230801 17:22:52.386"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=nama_lengkap</arg>
-<arg>John</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:47.920" level="INFO">Typing text 'John' into text field 'id=nama_lengkap'.</msg>
-<status status="PASS" starttime="20230627 15:10:47.916" endtime="20230627 15:10:48.050"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email</arg>
-<arg>johndoe@example.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.053" level="INFO">Typing text 'johndoe@example.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230627 15:10:48.051" endtime="20230627 15:10:48.148"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=telp</arg>
-<arg>+6281234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.151" level="INFO">Typing text '+6281234567890' into text field 'id=telp'.</msg>
-<status status="PASS" starttime="20230627 15:10:48.149" endtime="20230627 15:10:48.232"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.234" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20230627 15:10:48.266" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:10:48.316" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:10:48.232" endtime="20230627 15:10:48.317"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password_confirmation</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.321" level="INFO">Typing password into text field 'id=password_confirmation'.</msg>
-<msg timestamp="20230627 15:10:48.370" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:10:48.416" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:10:48.317" endtime="20230627 15:10:48.416"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=checkbox</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.420" level="INFO">Clicking element 'id=checkbox'.</msg>
-<status status="PASS" starttime="20230627 15:10:48.417" endtime="20230627 15:10:48.519"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230627 15:10:48.523" level="INFO">Clicking button 'name=submit'.</msg>
-<status status="PASS" starttime="20230627 15:10:48.520" endtime="20230627 15:10:48.989"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230801 17:22:55.387" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230801 17:22:52.386" endtime="20230801 17:22:55.387"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Verifikasi Email</arg>
+<arg>MOOD</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<msg timestamp="20230627 15:10:54.492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230627 15:10:54.493" level="FAIL">Text 'Verifikasi Email' did not appear in 5 seconds.</msg>
-<status status="FAIL" starttime="20230627 15:10:48.994" endtime="20230627 15:11:20.184"/>
+<status status="PASS" starttime="20230801 17:22:55.387" endtime="20230801 17:22:55.441"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230627 15:11:20.185" endtime="20230627 15:11:20.186"/>
-</kw>
-<status status="FAIL" starttime="20230627 15:10:44.288" endtime="20230627 15:11:20.189">Text 'Verifikasi Email' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t3" name="TC03" line="37">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230627 15:11:20.198" level="INFO">Opening browser 'Chrome' to base url 'https://alpha.surveyasia.id/register/researcher'.</msg>
-<status status="PASS" starttime="20230627 15:11:20.194" endtime="20230627 15:11:26.118"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230627 15:11:26.120" endtime="20230627 15:11:26.252"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=nama_lengkap</arg>
-<arg>jj123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.255" level="INFO">Typing text 'jj123' into text field 'id=nama_lengkap'.</msg>
-<status status="PASS" starttime="20230627 15:11:26.253" endtime="20230627 15:11:26.395"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email</arg>
-<arg>johndoie@example.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.400" level="INFO">Typing text 'johndoie@example.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230627 15:11:26.397" endtime="20230627 15:11:26.510"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=telp</arg>
-<arg>+6281234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.513" level="INFO">Typing text '+6281234567890' into text field 'id=telp'.</msg>
-<status status="PASS" starttime="20230627 15:11:26.512" endtime="20230627 15:11:26.609"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.611" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20230627 15:11:26.645" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:11:26.704" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:11:26.610" endtime="20230627 15:11:26.704"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password_confirmation</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.708" level="INFO">Typing password into text field 'id=password_confirmation'.</msg>
-<msg timestamp="20230627 15:11:26.748" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:11:26.810" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:11:26.705" endtime="20230627 15:11:26.810"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230801 17:22:57.445" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230801 17:22:55.441" endtime="20230801 17:22:57.445"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=checkbox</arg>
+<arg>xpath=//div[@id='sq_100']/div[2]/fieldset/div[2]/label/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.813" level="INFO">Clicking element 'id=checkbox'.</msg>
-<status status="PASS" starttime="20230627 15:11:26.811" endtime="20230627 15:11:26.863"/>
+<msg timestamp="20230801 17:22:57.446" level="INFO">Clicking element 'xpath=//div[@id='sq_100']/div[2]/fieldset/div[2]/label/span'.</msg>
+<status status="PASS" starttime="20230801 17:22:57.446" endtime="20230801 17:22:57.527"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:26.866" level="INFO">Clicking button 'name=submit'.</msg>
-<status status="PASS" starttime="20230627 15:11:26.863" endtime="20230627 15:11:27.188"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Complete']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:22:57.527" level="INFO">Clicking element 'xpath=//input[@value='Complete']'.</msg>
+<status status="PASS" starttime="20230801 17:22:57.527" endtime="20230801 17:22:57.603"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Thank you</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:22:57.603" endtime="20230801 17:22:57.650"/>
+</kw>
+<status status="PASS" starttime="20230801 17:22:39.005" endtime="20230801 17:22:57.652"/>
+</kw>
+<status status="PASS" starttime="20230801 17:22:39.003" endtime="20230801 17:22:57.652"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC73-&gt; Respondent mengisi survey yang sama</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC73-&gt; Respondent mengisi survey yang sama" library="survey">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, 300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:22:57.658" level="INFO">Executing JavaScript:
+window.scrollTo(0, 300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:22:57.654" endtime="20230801 17:22:57.668"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230801 17:22:59.668" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230801 17:22:57.668" endtime="20230801 17:22:59.668"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Execute JavaScript</arg>
+<arg>document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:22:59.668" level="INFO">Executing JavaScript:
+document.querySelector(".col-12:nth-child(2) .card-body &gt; .btn").click()
+Without any arguments.</msg>
+<msg timestamp="20230801 17:23:00.623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230801 17:23:00.624" level="FAIL">UnexpectedAlertPresentException: Alert Text: Network Errorundefined
+Message: unexpected alert open: {Alert text : Network Errorundefined}
+  (Session info: MicrosoftEdge=115.0.1901.188)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00007FF6FF795372+69586]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FF7255B2+760242]
+	(No symbol) [0x00007FF6FF4DB80C]
+	(No symbol) [0x00007FF6FF55CBCA]
+	(No symbol) [0x00007FF6FF542AC3]
+	(No symbol) [0x00007FF6FF5157DE]
+	(No symbol) [0x00007FF6FF514AAB]
+	(No symbol) [0x00007FF6FF515F64]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF6FF96D179+1294553]
+	(No symbol) [0x00007FF6FF594934]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FF673D31+33073]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FF66C349+1865]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF6FF96BD51+1289393]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FF72DBB8+20184]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FF72A244+5476]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FF72A33C+5724]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FF71EBF1+733169]
+	BaseThreadInitThunk [0x00007FF8F6F126AD+29]
+	RtlUserThreadStart [0x00007FF8F802AA68+40]
+</msg>
+<status status="FAIL" starttime="20230801 17:22:59.668" endtime="20230801 17:23:00.632"/>
+</kw>
+<status status="PASS" starttime="20230801 17:22:59.668" endtime="20230801 17:23:00.632"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${error_message}</var>
-<arg>xpath=/html/body/section/div/div/div[2]/div/div/form/div[1]/div</arg>
+<arg>css=.invalid-feedback</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:27.412" level="INFO">${error_message} = Nama Lengkap hanya boleh berisi huruf.</msg>
-<status status="PASS" starttime="20230627 15:11:27.189" endtime="20230627 15:11:27.413"/>
+<msg timestamp="20230801 17:23:01.100" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230801 17:23:01.100" level="FAIL">Element with locator 'css=.invalid-feedback' not found.</msg>
+<status status="FAIL" starttime="20230801 17:23:00.632" endtime="20230801 17:23:01.107"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${error_message}</arg>
-<arg>Nama Lengkap hanya boleh berisi huruf.</arg>
+<arg>Survey sudah diisi.</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230627 15:11:27.414" endtime="20230627 15:11:27.416"/>
+<status status="NOT RUN" starttime="20230801 17:23:01.108" endtime="20230801 17:23:01.108"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230627 15:11:27.418" endtime="20230627 15:11:29.553"/>
+<status status="FAIL" starttime="20230801 17:22:57.654" endtime="20230801 17:23:01.108"/>
 </kw>
-<status status="PASS" starttime="20230627 15:11:20.193" endtime="20230627 15:11:29.554"/>
-</test>
-<test id="s1-t4" name="TC04" line="51">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230627 15:11:29.561" level="INFO">Opening browser 'Chrome' to base url 'https://alpha.surveyasia.id/register/researcher'.</msg>
-<status status="PASS" starttime="20230627 15:11:29.559" endtime="20230627 15:11:36.701"/>
+<status status="FAIL" starttime="20230801 17:22:57.652" endtime="20230801 17:23:01.108"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230627 15:11:36.702" endtime="20230627 15:11:36.824"/>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC74-&gt; Pilih Kategori Survei Customers</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC74-&gt; Pilih Kategori Survei Customers" library="survey">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://alpha.surveyasia.id/respondent/dashboard</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230801 17:23:01.108" level="INFO">Opening url 'https://alpha.surveyasia.id/respondent/dashboard'</msg>
+<status status="PASS" starttime="20230801 17:23:01.108" endtime="20230801 17:23:01.448"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=nama_lengkap</arg>
-<arg>example</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:36.832" level="INFO">Typing text 'example' into text field 'id=nama_lengkap'.</msg>
-<status status="PASS" starttime="20230627 15:11:36.828" endtime="20230627 15:11:36.937"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=category</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230801 17:23:01.448" endtime="20230801 17:23:01.493"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email</arg>
-<arg>example</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:36.941" level="INFO">Typing text 'example' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20230627 15:11:36.939" endtime="20230627 15:11:37.069"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("select#category.form-select").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:23:01.495" level="INFO">Executing JavaScript:
+document.querySelector("select#category.form-select").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:23:01.493" endtime="20230801 17:23:01.675"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=telp</arg>
-<arg>+6281234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.072" level="INFO">Typing text '+6281234567890' into text field 'id=telp'.</msg>
-<status status="PASS" starttime="20230627 15:11:37.070" endtime="20230627 15:11:37.162"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>Customers</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230801 17:23:01.676" level="INFO">Selecting options from selection list 'id=category' by label Customers.</msg>
+<status status="PASS" starttime="20230801 17:23:01.675" endtime="20230801 17:23:02.212"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.165" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20230627 15:11:37.201" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:11:37.251" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:11:37.162" endtime="20230627 15:11:37.252"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Test Mobile</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:02.214" endtime="20230801 17:23:02.227"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=password_confirmation</arg>
-<arg>Mypassword123@</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.261" level="INFO">Typing password into text field 'id=password_confirmation'.</msg>
-<msg timestamp="20230627 15:11:37.305" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230627 15:11:37.358" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230627 15:11:37.258" endtime="20230627 15:11:37.359"/>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:02.227" endtime="20230801 17:23:02.648"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:01.108" endtime="20230801 17:23:02.648"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:01.108" endtime="20230801 17:23:02.648"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC75-&gt; Pilih Kategori Survei Education</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC75-&gt; Pilih Kategori Survei Education" library="survey">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=category</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230801 17:23:02.649" endtime="20230801 17:23:02.671"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("select#category.form-select").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:23:02.673" level="INFO">Executing JavaScript:
+document.querySelector("select#category.form-select").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:23:02.672" endtime="20230801 17:23:02.678"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>Education</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230801 17:23:02.678" level="INFO">Selecting options from selection list 'id=category' by label Education.</msg>
+<status status="PASS" starttime="20230801 17:23:02.678" endtime="20230801 17:23:03.172"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Pemilu 2024</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:03.172" endtime="20230801 17:23:03.194"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:03.194" endtime="20230801 17:23:03.546"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:02.649" endtime="20230801 17:23:03.547"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:02.648" endtime="20230801 17:23:03.548"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC76-&gt; Pilih Kategori Survei Healthcare</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC76-&gt; Pilih Kategori Survei Healthcare" library="survey">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=category</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230801 17:23:03.554" endtime="20230801 17:23:03.584"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("select#category.form-select").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:23:03.584" level="INFO">Executing JavaScript:
+document.querySelector("select#category.form-select").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:23:03.584" endtime="20230801 17:23:03.594"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>Healthcare</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230801 17:23:03.594" level="INFO">Selecting options from selection list 'id=category' by label Healthcare.</msg>
+<status status="PASS" starttime="20230801 17:23:03.594" endtime="20230801 17:23:03.869"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Survey Kependudukan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:03.870" endtime="20230801 17:23:04.085"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:04.085" endtime="20230801 17:23:04.437"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:03.554" endtime="20230801 17:23:04.438"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:03.548" endtime="20230801 17:23:04.440"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC77-&gt; Pilih Kategori Survei Employee</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC77-&gt; Pilih Kategori Survei Employee" library="survey">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=category</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230801 17:23:04.457" endtime="20230801 17:23:04.498"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("select#category.form-select").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:23:04.498" level="INFO">Executing JavaScript:
+document.querySelector("select#category.form-select").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:23:04.498" endtime="20230801 17:23:04.508"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>Employee</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230801 17:23:04.508" level="INFO">Selecting options from selection list 'id=category' by label Employee.</msg>
+<status status="PASS" starttime="20230801 17:23:04.508" endtime="20230801 17:23:04.863"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Pemetaan Misi dan Sasaran RPJMD</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:04.864" endtime="20230801 17:23:05.189"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:05.189" endtime="20230801 17:23:05.655"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:04.455" endtime="20230801 17:23:05.655"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:04.445" endtime="20230801 17:23:05.656"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC78-&gt; Pilih Kategori Survei Market Research</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC78-&gt; Pilih Kategori Survei Market Research" library="survey">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=category</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230801 17:23:05.673" endtime="20230801 17:23:05.728"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector("select#category.form-select").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230801 17:23:05.728" level="INFO">Executing JavaScript:
+document.querySelector("select#category.form-select").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230801 17:23:05.728" endtime="20230801 17:23:05.742"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>Market Research</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230801 17:23:05.742" level="INFO">Selecting options from selection list 'id=category' by label Market Research.</msg>
+<status status="PASS" starttime="20230801 17:23:05.742" endtime="20230801 17:23:06.617"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>KEPUASAN SURVEYASIA</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:06.617" endtime="20230801 17:23:06.634"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:06.636" endtime="20230801 17:23:07.080"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:05.671" endtime="20230801 17:23:07.082"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:05.671" endtime="20230801 17:23:07.083"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC79-&gt; Cari survey valid</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC79-&gt; Cari survey valid" library="survey">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@id='navbarDarkDropdownMenuLink']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:07.091" level="INFO">Clicking element 'xpath=//a[@id='navbarDarkDropdownMenuLink']'.</msg>
+<status status="PASS" starttime="20230801 17:23:07.088" endtime="20230801 17:23:07.150"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=checkbox</arg>
+<arg>css=.show &gt; li:nth-child(1) &gt; .dropdown-item</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.362" level="INFO">Clicking element 'id=checkbox'.</msg>
-<status status="PASS" starttime="20230627 15:11:37.361" endtime="20230627 15:11:37.462"/>
+<msg timestamp="20230801 17:23:07.152" level="INFO">Clicking element 'css=.show &gt; li:nth-child(1) &gt; .dropdown-item'.</msg>
+<status status="PASS" starttime="20230801 17:23:07.150" endtime="20230801 17:23:07.461"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.466" level="INFO">Clicking button 'name=submit'.</msg>
-<status status="PASS" starttime="20230627 15:11:37.463" endtime="20230627 15:11:37.528"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:07.461" level="INFO">Clicking element 'xpath=//input[@name='survey']'.</msg>
+<status status="PASS" starttime="20230801 17:23:07.461" endtime="20230801 17:23:07.511"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${class}</var>
-<arg>css=#email</arg>
-<arg>class</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20230627 15:11:37.569" level="INFO">${class} = form-control </msg>
-<status status="PASS" starttime="20230627 15:11:37.532" endtime="20230627 15:11:37.569"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<arg>Survey Kependudukan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:07.515" level="INFO">Typing text 'Survey Kependudukan' into text field 'xpath=//input[@name='survey']'.</msg>
+<status status="PASS" starttime="20230801 17:23:07.511" endtime="20230801 17:23:07.607"/>
 </kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${class}</arg>
-<arg>form-control</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230627 15:11:37.570" endtime="20230627 15:11:37.571"/>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<arg>\\13</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230801 17:23:07.607" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20230801 17:23:07.607" endtime="20230801 17:23:07.865"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230627 15:11:37.572" endtime="20230627 15:11:39.871"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Survey Kependudukan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230801 17:23:07.865" endtime="20230801 17:23:07.874"/>
 </kw>
-<status status="PASS" starttime="20230627 15:11:29.558" endtime="20230627 15:11:39.873"/>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20230801 17:23:07.874" endtime="20230801 17:23:08.183"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:07.088" endtime="20230801 17:23:08.183"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:07.085" endtime="20230801 17:23:08.185"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC80-&gt; Cari survey tidak valid</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC80-&gt; Cari survey tidak valid" library="survey">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@id='navbarDarkDropdownMenuLink']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:08.189" level="INFO">Clicking element 'xpath=//a[@id='navbarDarkDropdownMenuLink']'.</msg>
+<status status="PASS" starttime="20230801 17:23:08.185" endtime="20230801 17:23:08.247"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.show &gt; li:nth-child(1) &gt; .dropdown-item</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:08.247" level="INFO">Clicking element 'css=.show &gt; li:nth-child(1) &gt; .dropdown-item'.</msg>
+<status status="PASS" starttime="20230801 17:23:08.247" endtime="20230801 17:23:08.498"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:08.501" level="INFO">Clicking element 'xpath=//input[@name='survey']'.</msg>
+<status status="PASS" starttime="20230801 17:23:08.501" endtime="20230801 17:23:08.544"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<arg>00</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230801 17:23:08.546" level="INFO">Typing text '00' into text field 'xpath=//input[@name='survey']'.</msg>
+<status status="PASS" starttime="20230801 17:23:08.546" endtime="20230801 17:23:08.604"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>xpath=//input[@name='survey']</arg>
+<arg>\\13</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230801 17:23:08.607" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20230801 17:23:08.604" endtime="20230801 17:23:08.852"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>css=.alert</arg>
+<arg>Survey not found!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230801 17:23:08.852" endtime="20230801 17:23:08.879"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:08.185" endtime="20230801 17:23:08.879"/>
+</kw>
+<status status="PASS" starttime="20230801 17:23:08.185" endtime="20230801 17:23:08.879"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230801 17:23:08.879" endtime="20230801 17:23:15.235"/>
+</kw>
+<status status="FAIL" starttime="20230801 17:22:39.003" endtime="20230801 17:23:15.235">Element with locator 'css=.invalid-feedback' not found.</status>
 </test>
-<status status="FAIL" starttime="20230627 15:10:35.857" endtime="20230627 15:11:39.890"/>
+<status status="FAIL" starttime="20230801 17:22:38.767" endtime="20230801 17:23:15.245"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="1" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230801 17:23:07.607" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20230801 17:23:08.607" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
 </errors>
 </robot>
